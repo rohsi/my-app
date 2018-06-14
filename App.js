@@ -21,13 +21,13 @@ switchNameHandler = () => {
       return(
           <div className="App">
               <h1>Do U Work At Company</h1>
-              <button onClick={this.switchNameHandler}>Switch Name</button>
+              <button onClick={this.switchNameHandler()}>Switch Name</button>
           <Person name={this.state.persons[0].name} age={this.state.persons[0].age}/>
               <Person name={this.state.persons[1].name} age={this.state.persons[1].age}>My Hobbies:Playing games on mobile phone</Person>
               <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/>
           </div>
       );
-    return React.createElement('div',null,React.createElement('h1',{className:'App'},'Do You Work At Company?'));
+     React.createElement('div',null,React.createElement('h1',{className:'App'},'Do You Work At Company?'));
   }
 }
 
