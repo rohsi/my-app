@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Person from './Person.js'
-
+import person from "./Person";
 
 class App extends Component {
     state = {
@@ -14,13 +14,13 @@ class App extends Component {
         otherstate: "some other value"
 
     }
-    switchNameHandler = (newName) => {
-
+    switchNameHandler = () => {
+        console.log("herllosdf")
         //console.log('Was Clicked!');
         //Dont do this this.state.persons[0].name='maxmillian';
         this.setState({
             persons: [
-                {name: newName, age: '29'},
+                {name: 'Rohit Sinha', age: '29'},
                 {name: 'Mohit', age: '25'},
                 {name: 'Pankaj', age: '57'}
             ]
@@ -31,12 +31,17 @@ class App extends Component {
         return (
             <div className="App">
                 <h1>Do U Work At Company</h1>
-                <button onClick={() =>this.switchNameHandler('Rohit Sinha!!')}>Switch Name</button>
-                <Person name={this.state.persons[0].name} age={this.state.persons[0].age}/>
-                <Person name={this.state.persons[1].name} age={this.state.persons[1].age}
-                click={this.switchNameHandler.bind(this,'Rohit ')}>My Hobbies:Playing games on
+                <button onClick={this.switchNameHandler}>Switch Name</button>
+                <Person
+                    name={this.state.persons[0].name}
+                    age={this.state.persons[0].age}/>
+                <Person
+                    name={this.state.persons[1].name}
+                    age={this.state.persons[1].age}>My Hobbies:Playing games on
                     mobile phone</Person>
-                <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/>
+                <Person
+                    name={this.state.persons[2].name}
+                    age={this.state.persons[2].age}/>
             </div>
         );
         // React.createElement('div',null,React.createElement('h1',{className:'App'},'Do You Work At Company?'));

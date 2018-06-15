@@ -31,10 +31,10 @@ class App extends Component {
         return (
             <div className="App">
                 <h1>Do U Work At Company</h1>
-                <button onClick={() =>this.switchNameHandler('Rohit Sinha!!')}>Switch Name</button>
+                <button onClick={this.switchNameHandler.bind(this,'Rohit Sinha')}>Switch Name</button>
                 <Person name={this.state.persons[0].name} age={this.state.persons[0].age}/>
                 <Person name={this.state.persons[1].name} age={this.state.persons[1].age}
-                click={this.switchNameHandler.bind(this,'Rohit ')}>My Hobbies:Playing games on
+                        click={this.switchNameHandler.bind(this,'Mohit !')}>My Hobbies:Playing games on
                     mobile phone</Person>
                 <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/>
             </div>
